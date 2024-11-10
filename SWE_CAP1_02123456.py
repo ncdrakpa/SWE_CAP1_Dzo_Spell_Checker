@@ -56,18 +56,29 @@ unique_to_file1 = {word for word in words1 if word not in words2}
 
 [print(f"The word '{word}' from 351.txt is incorrect.") for word in unique_to_file1]
 
+<<<<<<< HEAD
 
 If_name_=="_main_"
 import sys
 
+=======
+if_name_=="_main_":
+import sys
+>>>>>>> b298a873ad1ffdb160fd4ce5c6c7eab491ba86fb
 if len (sys.argv)!=2:
     print("Usage: python remove_eng.py <input_file>")
     sys.exit(1)
 
+<<<<<<< HEAD
     input_file = sys.argv[1]
     dictonary_file = "dictonary.txt"
     spell_check(input_file, dictonary_file)
 
+=======
+input_file = sys.argv[1]
+dictonary_file = "dictonary.txt"
+spell_check(input_file, dictonary_file)
+>>>>>>> b298a873ad1ffdb160fd4ce5c6c7eab491ba86fb
 
 
 
