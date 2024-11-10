@@ -35,14 +35,9 @@ def remove_eng (infile, ofile) :
         outfile.write(text_clean)
 
 y = 'dictionary_converted.txt' 
-x = 'cleaned_dictionary.txt'  
+x = 'clean ed_dictionary.txt'  
 remove_eng ( y, x)
 print (f'all characters in dictionary have removed "{y}" and  save to "{x}.')
-
-
-
-
-
 #Main spell checking function
 
 
@@ -61,6 +56,17 @@ unique_to_file1 = {word for word in words1 if word not in words2}
 
 [print(f"The word '{word}' from 351.txt is incorrect.") for word in unique_to_file1]
 
+
+If_name_=="_main_"
+import sys
+
+if len (sys.argv)!=2:
+    print("Usage: python remove_eng.py <input_file>")
+    sys.exit(1)
+
+    input_file = sys.argv[1]
+    dictonary_file = "dictonary.txt"
+    spell_check(input_file, dictonary_file)
 
 
 
