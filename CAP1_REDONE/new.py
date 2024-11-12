@@ -1,12 +1,11 @@
 import os
 
 def main():
-    # Continuously prompt the user until valid paths are given
     while True:
         dictionary_path = input("Enter the Dzongkha dictionary file path: ")
         text_path = input("Enter the text file path to spell check: ")
 
-        # Verify both paths
+        #  paths
         if not os.path.isfile(dictionary_path):
             print("Dictionary file path is invalid. Please try again.")
             continue
@@ -14,7 +13,7 @@ def main():
             print("Text file path is invalid. Please try again.")
             continue
 
-        # Perform spell-checking if paths are valid
+        # spell-checking paths are valid
         incorrect_words = spell_check(dictionary_path, text_path)
         if incorrect_words:
             print("Misspelled words found:")
@@ -25,7 +24,7 @@ def main():
         break
 
 def load_dictionary(dict_path):
-    # Load words from the dictionary file into a set for fast access
+    # Load words from the dictionary file to access
     with open(dict_path, 'r', encoding='utf-8') as file:
         return {line.strip() for line in file}
 
